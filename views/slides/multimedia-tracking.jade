@@ -15,28 +15,26 @@ html
           b doesn't support the features required 
           | by impress.js, so you are presented with a simplified version of this presentation.
         p For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser. Upcoming version 10 of Internet Explorer <i>should</i> also handle it.
-      div#start.step.slide(data-x="-1000", data-y="-1500")
-        q Start
       div#overview.step(data-x="3000", data-y="1500", data-scale="10")
       div#title.step(data-x="0", data-y="0", data-scale="2")
         h2 数字化媒体的跟踪与分析
       div#aboutMe.step(data-x="1000", data-y="1000")
         h2 郑达韡
+        hr
         ul
           li 
-            //a(href="http://in.sdo.com/") 
-            //img(src="/images/in.sdo.jpg", alt="盛大创新院", width="234", height="54")
             p 
-              a(href="http://in.sdo.com") 盛大创新院 
+              a(href="http://in.sdo.com")
+                img(src="/images/in.sdo.jpg", alt="盛大创新院", width="234", height="54")
               | 多媒体院 高级研究员
           li
-            p Home Page:
-              a(href="http://zdwalter.info") http://zdwalter.info
+            a(href="http://zdwalter.info") http://zdwalter.info
       div#trends_music.step(data-x="2000", data-y="-1500")
         center
           h2 多媒体数字化的趋势，无法阻挡
           hr
           p 音乐
+          p
             font(color="4684ee") CD
             | vs 
             font(color="dc3912") MP3
@@ -48,6 +46,7 @@ html
         center
           hr
           p 视频
+          p
             font(color="4684ee") DVD 
             | vs 
             font(color="dc3912") YouTube 
