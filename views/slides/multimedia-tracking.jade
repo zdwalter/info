@@ -30,7 +30,7 @@ html
               | 多媒体院 高级研究员
           li
             a(href="http://zdwalter.info") http://zdwalter.info
-      div#trends_music.step(data-x="2000", data-y="-1500")
+      div#trends_music.step(data-x="2000", data-y="-1500", data-rotate="-90")
         center
           h2 多媒体数字化的趋势，无法阻挡
           hr
@@ -42,7 +42,6 @@ html
             a(href="http://www.google.com/trends/?q=CD,+mp3&ctab=0&geo=all&date=all&sort=1") 
               font(color="#808080",size=3) (data source)
           img(src="/images/trends_CD_vs_MP3.jpg")
- 
       div#trends_video.step(data-x="2000", data-y="-900")
         center
           hr
@@ -54,13 +53,26 @@ html
             a(href="http://www.google.com/trends/?q=DVD,+youtube|video&ctab=0&geo=all&date=all&sort=1") 
               font(color="#808080",size=3) (data source)
           img(src="/images/trends_DVD_vs_YouTube.jpg")
-      div#trends_noval.step(data-x="2000", data-y="-300")
+      div#trends_noval.step(data-x="2000", data-y="-300" , data-rotate="90")
         center
           hr
           p
             img(src="/images/cloudary_logo.png", width="286px", height="124px")
           p
             img(src="/images/cloudary_income.png")
+      div#cost.step(data-x="2000", data-y="1000",data-scale="1")
+        div
+          p
+            我就是
+        div
+          p
+            img(src="/images/Conan2_by_Shinichiran.jpg", height="80%")
+          hr
+          p
+            font(size="1") image source: http://shinichiran.deviantart.com/art/Conan2-154612801
+      div#cost_joke.step(data-x="2000", data-y="1000", data-z="-100", data-scale="1", data-rotate="-10")
+        p
+          b.rotating 万年小学生
         
 
     script(src="/javascripts/impress.js")
