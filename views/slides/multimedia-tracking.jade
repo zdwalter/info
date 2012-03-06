@@ -15,9 +15,10 @@ html
           b doesn't support the features required 
           | by impress.js, so you are presented with a simplified version of this presentation.
         p For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser. Upcoming version 10 of Internet Explorer <i>should</i> also handle it.
-      div#overview.step(data-x="0", data-y="0", data-scale="4")
-      div#title.step(data-x="0", data-y="0", data-scale="4")
-        h2 数字化媒体的跟踪与分析
+      div#overview.step(data-x="0", data-y="0", data-scale="5")
+      div#title.step(data-x="0", data-y="0", data-scale="3")
+        center
+          h2 数字化媒体的跟踪与分析
       div#aboutMe.step(data-x="1000", data-y="1500")
         h2 郑达韡
         hr
@@ -35,14 +36,14 @@ html
           hr
           p 音乐
           p
-            font(color="4684ee") CD
+            font(color="4684ee") CD 
             | vs 
             font(color="dc3912") MP3
             a(href="http://www.google.com/trends/?q=CD,+mp3&ctab=0&geo=all&date=all&sort=1") 
               font(color="#808080",size=3) (data source)
           img(src="/images/trends_CD_vs_MP3.jpg")
  
-      div#trends.step(data-x="2000", data-y="-1000")
+      div#trends_video.step(data-x="2000", data-y="-900")
         center
           hr
           p 视频
@@ -53,6 +54,13 @@ html
             a(href="http://www.google.com/trends/?q=DVD,+youtube|video&ctab=0&geo=all&date=all&sort=1") 
               font(color="#808080",size=3) (data source)
           img(src="/images/trends_DVD_vs_YouTube.jpg")
+      div#trends_noval.step(data-x="2000", data-y="-300")
+        center
+          hr
+          p
+            img(src="/images/cloudary_logo.png", width="286px", height="124px")
+          p
+            img(src="/images/cloudary_income.png")
         
 
     script(src="/javascripts/impress.js")
