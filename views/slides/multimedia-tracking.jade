@@ -5,7 +5,7 @@ html
     meta(name="apple-mobile-web-app-capable", content="yes")
     title 数字化媒体的跟踪与分析
     meta(name="author", content="Walter Zheng")
-    link(rel='stylesheet', href='/stylesheets/multimedia-tracking.css')
+    //link(rel='stylesheet', href='/stylesheets/multimedia-tracking.css')
     link(rel='stylesheet', href='/stylesheets/impress-demo.css')
     script
       var _gaq = _gaq || [];
@@ -25,11 +25,10 @@ html
           b doesn't support the features required 
           | by impress.js, so you are presented with a simplified version of this presentation.
         p For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser. Upcoming version 10 of Internet Explorer <i>should</i> also handle it.
-      div#overview.step(data-x="0", data-y="0", data-scale="5")
-      div#title.step(data-x="-500", data-y="-600", data-z="500", data-scale="3")
+      div#title.step(data-x="0", data-y="0", data-scale="3")
         center
           h2 数字化媒体的跟踪与分析
-      div#aboutMe.step(data-x="1000", data-y="1500")
+      div#aboutMe.step.slide(data-x="0", data-y="-2000")
         h2 郑达韡
         hr
         ul
@@ -40,7 +39,7 @@ html
               | 多媒体院 高级研究员
           li
             a(href="http://zdwalter.info") http://zdwalter.info
-      div#trends_music.step(data-x="2000", data-y="-1500", data-rotate="-90")
+      div#trends_music.step.slide(data-x="1000", data-y="-1800", data-rotate="30")
         center
           h2 多媒体数字化的趋势，无法阻挡
           hr
@@ -52,8 +51,9 @@ html
             a(href="http://www.google.com/trends/?q=CD,+mp3&ctab=0&geo=all&date=all&sort=1") 
               font(color="#808080",size=3) (data source)
           img(src="/images/trends_CD_vs_MP3.jpg")
-      div#trends_video.step(data-x="2000", data-y="-900")
+      div#trends_video.step.slide(data-x="1800", data-y="-1100", data-rotate="60")
         center
+          h2 多媒体数字化的趋势，无法阻挡
           hr
           p 视频
           p
@@ -63,35 +63,39 @@ html
             a(href="http://www.google.com/trends/?q=DVD,+youtube|video&ctab=0&geo=all&date=all&sort=1") 
               font(color="#808080",size=3) (data source)
           img(src="/images/trends_DVD_vs_YouTube.jpg")
-      div#trends_noval.step(data-x="2000", data-y="-300" , data-rotate="90")
+      div#trends_noval.step.slide(data-x="2000", data-y="0" , data-rotate="90")
         center
+          h2 多媒体数字化的趋势，无法阻挡
           hr
           p
             img(src="/images/cloudary_logo.png", width="286px", height="124px")
           p
             img(src="/images/cloudary_income.png")
-      div#real.step(data-x="-1000", data-y="-1000", data-scale="1")
-        h2 正版的优势
+      div#real.step.slide(data-x="1800", data-y="1100", data-scale="1", data-rotate="120")
+        h2 
+          b 正版的优势
         hr
         ul
           li 更新快
           li 查找方便
           li 下载快速
           li 内容质量高
-      div#fake.step(data-x="-0", data-y="-1000", data-scale="1")
-        h2 盗版的优势
+      div#fake.step.slide(data-x="1000", data-y="1800", data-rotate="150", data-scale="1")
+        h2 
+          b 盗版的优势
         hr
         ul
           li 免费
-      div#fake_bad.step(data-x="1000", data-y="-1000", data-scale="1")
-        h2 盗版的劣势
+      div#fake_bad.step.slide(data-x="0", data-y="2000", data-rotate="180", data-scale="1")
+        h2 
+          b 盗版的劣势
         hr
         ul
           li 威胁: 病毒、木马
           li 干扰: 广告、弹窗
           li 时间: 查找、筛选
           li 质量: 粗糙
-      div#cost.step(data-x="2000", data-y="1000",data-scale="1")
+      div#cost.step.slide(data-x="-1000", data-y="1800", data-rotate="210", data-scale="1")
         center
           div
             p
@@ -102,53 +106,64 @@ html
             hr
             p
               font(size="1") image source: http://shinichiran.deviantart.com/art/Conan2-154612801
-      div#cost_joke.step(data-x="2000", data-y="1000", data-z="-100", data-scale="1", data-rotate="-10")
+      div#cost_joke.step(data-x="-1000", data-y="1800", data-z="-200", data-scale="1", data-rotate="220")
         center
           p
             b.rotating 万年小学生
-      div#method.step(data-x="-1000", data-y="1000", data-scale="2")
+      div#method.step.slide(data-x="-1800", data-y="1100", data-scale="1", data-rotate="240")
         center
           p 商业模式的竞争
           hr
           p 技术如何帮助业务？
-      div#goal.step(data-x="-1000", data-y="1000", data-z="-1000", data-rotate="180", data-scale="1")
+      div#goal.step(data-x="-1800", data-y="1100", data-z="-2000", data-rotate="240", data-scale="1")
         center
           p 目标: 断绝盗版的存在
-      div#site_youtube.step(data-x="0", data-y="900")
+      div#site_youtube.step.slide(data-x="-2000", data-y="0", data-rotate="270")
         center
           p 盗版网站类型
           hr
           p UGC
           img(src="/images/youtube.png", width="80%")
-      div#site_youku.step(data-x="0", data-y="950", data-z="-1000")
+      div#site_youku.step.slide(data-x="-2000", data-y="0", data-rotate="270", data-z="-1000")
         center
+          p 盗版网站类型
+          hr
+          p UGC
           img(src="/images/youku.png", width="80%")
-      div#site_tudou.step(data-x="0", data-y="1000", data-z="-2000")
+      div#site_tudou.step.slide(data-x="-2000", data-y="0", data-rotate="270", data-z="-2000")
         center
+          p 盗版网站类型
+          hr
+          p UGC
           img(src="/images/tudou.png", width="80%")
-      div#site_tieba.step(data-x="800", data-y="800")
+      div#site_tieba.step.slide(data-x="800", data-y="800")
         center
+          p 盗版网站类型
+          hr
+          p UGC
           img(src="/images/tieba.png", width="80%")
-      div#site_ranwen.step(data-x="-1000", data-y="-1500")
+      div#site_ranwen.step.slide(data-x="-1000", data-y="-1500")
         center
           p 小说站
           hr
           img(src="/images/ranwen.png", width="80%")
-      div#site_luoqiu.step(data-x="-300", data-y="-1450")
+      div#site_luoqiu.step.slide(data-x="-300", data-y="-1450")
         center
+          p 小说站
+          hr
           img(src="/images/luoqiu.png", width="80%")
-      div#article_good.step(data-x="200", data-y="-1500")
+      div#article_good.step.slide(data-x="200", data-y="-1500")
         center
           p 小说内容
           hr
           img(src="/images/article_good.png", height="80%")
-      div#article_bbs.step(data-x="800", data-y="-1800", data-rotate="90")
+      div#article_bbs.step.slide(data-x="800", data-y="-1800", data-rotate="90")
         center
           img(src="/images/article_bbs.png", height="80%")
-      div#article_bad.step(data-x="1500", data-y="-1500", data-rotate="0")
+      div#article_bad.step.slide(data-x="1500", data-y="-1500", data-rotate="0")
         center
           img(src="/images/article_bad.png", width="80%")
-      div#fingerprint.step(data-x="-1500", data-y="500", data-scale="1", data-rotate="90")
+      div#fingerprint.step.slide(data-x="-1500", data-y="500", data-scale="1", data-rotate="90")
         center
           p 文学指纹算法
         hr
@@ -164,19 +179,20 @@ html
               b 大小为文本内容的 1/6
             li 分段独立 - 
               b 截取内容的一部分，也可以匹配
-      div#architect.step(data-x="500", data-y="-100", data-z="-3000", data-scale="3")
+      div#architect.step.slide(data-x="500", data-y="-100", data-z="-3000", data-scale="3")
         center
           img(src="/images/architect.png")
-      div#site.step(data-x="-2500", data-y="-1000")
+      div#site.step.slide(data-x="-2500", data-y="-1000")
         img(src="/images/site.png")
-      div#size.step(data-x="-2500", data-y="-500")
+      div#size.step.slide(data-x="-2500", data-y="-500")
         img(src="/images/size.png")
-      div#geo.step(data-x="-2500", data-y="0")
+      div#geo.step.slide(data-x="-2500", data-y="0")
         img(src="/images/geo.png")
-      div#ads.step(data-x="-2500", data-y="500")
+      div#ads.step.slide(data-x="-2500", data-y="500")
         img(src="/images/ads.png")
-      div#pv.step(data-x="-2500", data-y="1000")
+      div#pv.step.slide(data-x="-2500", data-y="1000")
         img(src="/images/pv.png")
+      div#overview.step(data-x="0", data-y="0", data-scale="5")
 
 
         
