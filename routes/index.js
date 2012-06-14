@@ -18,3 +18,8 @@ exports.proxyhub = function(req, res){
 exports.slides = function(req, res){
   res.render('slides/'+req.params.title, {layout:false})
 };
+
+exports.echo = function(req, res) {
+    content = req.params.content;
+    res.end(content);
+};

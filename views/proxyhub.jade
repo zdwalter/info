@@ -16,3 +16,9 @@ p The internal slave proxies are just plain simple HTTP proxies (like one you wo
 p The masters, however, implement a proprietary algorithm to minimize the risks of getting banned, by throttling requests sent to sites from each internal slave, among other techniques. If, for whatever reason, any slaves do get banned anyway, the masters will detect and avoid using them in the future for those particular sites.
 
 p Banned requests typically return a non-200 response (usually 503 or 403) or will redirect to a captcha page. These responses are detected by ProxyHub masters and the requests are automatically retried from other (clean) slaves. Banned slaves are blacklisted to prevent using them again for that domain. All this logic happens inside ProxyHub infrastructure and the user never receives the banned response, nor is charged for them (only successful requests are charged). The user may get a 503 response from ProxyHub if there are no more clean slaves left to try for a particular domain. In this case, the user may choose to reserve dedicated slaves to increase the capacity. Also, thanks to how ProxyHub architecture works, users can supply their own proxies to be used as slave. See Pricing for more details.
+
+h2 Tools
+
+h3 Echo server
+
+a(href='/echo/Hello World') Test 'Hello World'
