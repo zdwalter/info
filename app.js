@@ -33,6 +33,7 @@ app.get('/', routes.index);
 
 app.get('/slides/:title', routes.slides);
 app.get('/js', routes.js);
+app.get('/proxyhub', routes.proxyhub);
 
 app.listen(8000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

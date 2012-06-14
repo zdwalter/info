@@ -1,0 +1,18 @@
+h1
+  a(href='http://proxyhub.info') ProxyHub
+
+h2 Introduction
+
+p ProxyHub provides an HTTP proxy, with a pool of rotating IPs, designed specifically for scraping purposes. Although it provides a standard HTTP proxy interface it does a lot more internally, like throttling access to domains by introducing delays and discarding IPs from the pool when they get banned or have other problems. As a scraping user, you no longer have to worry about tinkering with download delays, concurrent requests, user agents, cookies or referrers to avoid getting banned from sites, you just configure the proxy and fire up your crawler of choice and start scraping.
+
+h2 Features
+
+p standard HTTP proxy interface and proxy authentication dead simple pricing: you only pay for successful requests anonymity: your IP is hidden and identifying headers (such as user-agent are removed) proprietary algorithm for rate limiting, internal throttling and ban detection IPs can be reserved for exclusive access to increase capacity ability to add your own proxies to the pool of IPs outgoing IPs rotated periodically customize the location of the IPs used dashboard to monitor usage and costs How does it work?
+
+p ProxyHub architecture is based on a group of “master” proxies that receive the user requests and distribute them among many internal “slave” proxies.
+
+p The internal slave proxies are just plain simple HTTP proxies (like one you would run with Squid or similar software) with no extra logic.
+
+p The masters, however, implement a proprietary algorithm to minimize the risks of getting banned, by throttling requests sent to sites from each internal slave, among other techniques. If, for whatever reason, any slaves do get banned anyway, the masters will detect and avoid using them in the future for those particular sites.
+
+p Banned requests typically return a non-200 response (usually 503 or 403) or will redirect to a captcha page. These responses are detected by ProxyHub masters and the requests are automatically retried from other (clean) slaves. Banned slaves are blacklisted to prevent using them again for that domain. All this logic happens inside ProxyHub infrastructure and the user never receives the banned response, nor is charged for them (only successful requests are charged). The user may get a 503 response from ProxyHub if there are no more clean slaves left to try for a particular domain. In this case, the user may choose to reserve dedicated slaves to increase the capacity. Also, thanks to how ProxyHub architecture works, users can supply their own proxies to be used as slave. See Pricing for more details.
