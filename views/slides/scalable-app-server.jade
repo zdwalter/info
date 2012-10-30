@@ -1,0 +1,139 @@
+!!!
+html
+  head
+    meta(name="viewport", content="width=1024")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    title Scalable App Server
+    meta(name="author", content="Walter Zheng")
+    //link(rel='stylesheet', href='/stylesheets/multimedia-tracking.css')
+    link(rel='stylesheet', href='/stylesheets/impress-demo.css')
+    script
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29683356-1']);
+      _gaq.push(['_setDomainName', 'zdwalter.info']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  body
+    div#impress.impress-not-supported
+      div.fallback-message
+        p Your browser 
+          b doesn't support the features required 
+          | by impress.js, so you are presented with a simplified version of this presentation.
+        p For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser. Upcoming version 10 of Internet Explorer <i>should</i> also handle it.
+      div#title.step(data-x="0", data-y="0", data-scale="3")
+        center
+          h2 Scalable App Server
+      div#aboutMe.step.slide(data-x="0", data-y="-2000")
+        h2 郑达韡 (Walter Zheng)
+        hr
+        ul
+          li 
+            p 2012-11 
+          li
+            a(href="http://zdwalter.info") http://zdwalter.info
+      div#Technology.step.slide(data-x="1000", data-y="-1800", data-rotate="30")
+        h1 Technology
+        hr
+        h2 
+          font(color="dc3912") Core:
+        ul
+          li Node.js
+          li Express
+          li MongoDB
+        hr
+        p
+        hr
+
+        h2 
+          font(color="4684ee") Extra:
+        ul
+          li Nginx
+          li Jade
+          li connection-pool
+          li Redis / ZeroMQ / RabbitMQ
+          li Mocha
+          li CoffeeScript
+      div#architect.step(data-x="1000", data-y="-1800", data-rotate="30", data-z="-1000")
+        center
+          h2 System Architecture
+          hr
+          img(width="100%", src="/images/node/Architect.png")
+      div#whats-node.step.slide(data-x="1000", data-y="-1800", data-rotate="30", data-z="-2000")
+        center
+          h2 What's Node
+          hr
+          img(src="/images/node/node-under-hood.png")
+          p A platform that makes writing powerful C/C++ server-side apps easy by essentially wrapping them in JavaScript.
+      div#why-node.step.slide(data-x="1800", data-y="-1100", data-scale="1", data-rotate="60")
+        h2 
+          b Why Node
+        hr
+        ul
+          li It's JavaScript!
+          li Savings in I/O cost
+          li Savings in Memory
+      div#async-io.step.slide(data-x="2000", data-y="0", data-scale="1", data-rotate="90")
+        img(src="/images/node/two_approaches_to_IO.jpeg")
+      div#saving-io.step.slide(data-x="1800", data-y="1100", data-scale="1", data-rotate="120")
+        img(width="100%",src="/images/node/concurrent.png")
+      div#saving-memory.step.slide(data-x="1000", data-y="1800", data-rotate="150")
+        img(width="100%",src="/images/node/memory.png")
+      div#how.step.slide(data-x="1000", data-y="1800", data-rotate="150", data-z="-1000")
+        h2
+          b How to be so fast?
+        hr
+        ul
+          li single thread
+          li V8 JavaScript engine
+          li non-blocking I/O
+          li event driven (event-loop)
+      div#multi-thread.step.slide(data-x="1000", data-y="1800", data-rotate="150", data-z="-2000")
+        h2 Multi-thread + Blocking I/O 
+        img(width="100%",src="/images/node/multiThreadedServer.png")
+      div#event-loop.step.slide(data-x="1000", data-y="1800", data-rotate="150", data-z="-3000")
+        img(width="100%",src="/images/node/event-loop.jpeg")
+      div#hello-world.step.slide(data-x="0", data-y="2000", data-rotate="180", data-z="-3000")
+        img(width="100%",src="/images/node/hello-world.jpeg")
+      div#express.step.slide(data-x="0", data-y="2000", data-rotate="180", data-z="-2000")
+        img(width="100%",src="/images/node/express-example.jpg")
+      div#mongodb.step.slide(data-x="-1000", data-y="1800", data-z="-2000", data-rotate="210")
+        img(width="100%",src="/images/node/nosql.jpg")
+      div#when.step.slide(data-x="-1000", data-y="1800", data-z="-1000", data-rotate="210")
+        h2 When to Use?
+        hr
+        ul
+            li 1. Build a (soft) real-time social app like Twitter or a chat app.
+            li 2. Build high-performance, high I/O, TCP apps like proxy servers, PaaS, databases, etc.
+            li 3. Build backend logging and processing apps.
+            li 4. Add a RESTful API-based web server in front of an application server.
+      div#tools.step.slide(data-x="-1000", data-y="1800", data-z="0", data-rotate="210")
+        center
+          img(height="100%",src="/images/node/tools.jpg")
+      div#jade.step(data-x="-1800", data-y="1000", data-scale="1", data-rotate="240")
+        img(width="100%",src="/images/node/jade.jpg")
+      div#mocha.step(data-x="-1300", data-y="710", data-scale="1", data-rotate="240")
+        img(width="100%",src="/images/node/mocha.jpg")
+      div#coverage.step(data-x="-2000", data-y="0", data-z="0", data-scale="1", data-rotate="270")
+        img(width="100%",src="/images/node/coverage.png")
+      div#coffee.step(data-x="-1800", data-y="-1500")
+        img(src="/images/node/coffee.png")
+        hr
+        img(width="100%",src="/images/node/coffee-example.png")
+      //div#.step(data-x="-1000", data-y="-1500")
+      //div#.step(data-x="-1000", data-y="-800")
+      //div#.step(data-x="-1800", data-y="-800")
+      //div#.step(data-x="-1800", data-y="-800", data-z="-2000")
+      //div#overview.step(data-x="0", data-y="0", data-scale="5")
+
+
+        
+
+    script(src="/javascripts/impress.js")
+    script
+        impress();
+
