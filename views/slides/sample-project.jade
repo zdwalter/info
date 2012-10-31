@@ -1,0 +1,145 @@
+!!!
+html
+  head
+    meta(name="viewport", content="width=1024")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    title How to set up a Node project
+    meta(name="author", content="Walter Zheng")
+    //link(rel='stylesheet', href='/stylesheets/multimedia-tracking.css')
+    link(rel='stylesheet', href='/stylesheets/impress-demo.css')
+    script
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29683356-1']);
+      _gaq.push(['_setDomainName', 'zdwalter.info']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  body
+    div#impress.impress-not-supported
+      div.fallback-message
+        p Your browser 
+          b doesn't support the features required 
+          | by impress.js, so you are presented with a simplified version of this presentation.
+        p For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser. Upcoming version 10 of Internet Explorer <i>should</i> also handle it.
+      div#title.step(data-x="0", data-y="0", data-scale="3")
+        center
+          h2 Sample Project
+      div#aboutMe.step.slide(data-x="0", data-y="-2000")
+        h2 郑达韡 (Walter Zheng)
+        hr
+        ul
+          li 
+            p 2012-11 
+          li
+            a(href="https://github.com/zdwalter/empty", target="_blank") https://github.com/zdwalter/empty
+      div#Technology.step.slide(data-x="1000", data-y="-1800", data-rotate="30")
+        h1 Technology
+        hr
+        h2 
+          font(color="dc3912") Core:
+        ul
+          li Node.js
+          li Express
+          li MongoDB
+        hr
+        p
+        hr
+
+        h2 
+          font(color="4684ee") Extra:
+        ul
+          li Nginx
+          li Jade
+          li connection-pool
+          li Redis / ZeroMQ / RabbitMQ
+          li Mocha
+          li CoffeeScript
+      div#architect.step(data-x="1000", data-y="-1800", data-rotate="30", data-z="-1000")
+        center
+          h2 System Architecture
+          hr
+          img(width="100%", src="/images/node/Architect.png")
+      div#file-structure.step.slide(data-x="1000", data-y="-1800", data-rotate="30", data-z="-2000")
+        center
+          h2 File Structure
+          hr
+          img(src="/images/project/file-structure.png")
+      div#define-interface.step.slide(data-x="1800", data-y="-1100", data-scale="1", data-rotate="60")
+        center
+          h2 Define Interface
+          hr
+          img(src="/images/project/define-interface.png")
+      div#start.step.slide(data-x="2000", data-y="0", data-scale="1", data-rotate="90")
+        center
+          h2 Start the project
+          hr
+          img(src="/images/project/start.png")
+          p visit http://localhost:3000
+      div#UI.step.slide(data-x="1800", data-y="1100", data-scale="1", data-rotate="120")
+        center
+          img(height="100%", src="/images/project/UI.png")
+      div#add-route.step.slide(data-x="1000", data-y="1800", data-rotate="150")
+        center
+          h2 Add Route
+          hr
+          img(src="/images/project/add-route.png")
+      div#add-logic.step.slide(data-x="1000", data-y="1800", data-rotate="150", data-z="-1000")
+        center
+          h2 Add Logic
+          hr
+          img(src="/images/project/add-logic.png")
+          p After these, restart the server and try new API on webpage
+      div#test-with-UI.step.slide(data-x="1000", data-y="1800", data-rotate="150", data-z="-2000")
+        center
+          h2 Test with UI
+          hr
+          img(height="100%", src="/images/project/UI.png")
+      div#unit-test.step.slide(data-x="1000", data-y="1800", data-rotate="150", data-z="-3000")
+        center
+          h2 write unit-test
+          hr
+          img(height="100%", src="/images/project/unit-test.png")
+      div#run-test.step.slide(data-x="0", data-y="2000", data-rotate="180", data-z="-3000")
+        center
+          h2 run unit-test
+          hr
+          img(height="100%", src="/images/project/test.png")
+      div#coverage.step.slide(data-x="0", data-y="2000", data-rotate="180", data-z="-2000")
+        center
+          h2 check code coverage
+          hr
+          img(height="100%", src="/images/project/coverage.png")
+      div#mongodb.step.slide(data-x="-1000", data-y="1800", data-z="-2000", data-rotate="210")
+        center
+          h2 mongodb helper, with connection-pool
+          hr
+          img(height="100%", src="/images/project/mongodb.png")
+      div#logger.step.slide(data-x="-1000", data-y="1800", data-z="-1000", data-rotate="210")
+        center
+          h2 logger
+          hr
+          img(src="/images/project/logger.png")
+      div#jade.step.slide(data-x="-1000", data-y="1800", data-z="0", data-rotate="210")
+        center
+          img(width="100%",src="/images/node/jade.jpg")
+      //div#.step(data-x="-1800", data-y="1000", data-scale="1", data-rotate="240")
+      //div#.step(data-x="-1300", data-y="710", data-scale="1", data-rotate="240")
+      //div#.step(data-x="-2000", data-y="0", data-z="0", data-scale="1", data-rotate="270")
+      //div#.step(data-x="-1800", data-y="-1500")
+      //div#.step(data-x="-1000", data-y="-1500")
+      //div#.step(data-x="-1000", data-y="-800")
+      //div#.step(data-x="-1800", data-y="-800")
+      //div#.step(data-x="-1800", data-y="-800", data-z="-2000")
+      div#overview.step(data-x="0", data-y="0", data-scale="5")
+
+
+        
+
+    script(src="/javascripts/impress.js")
+    script
+        impress();
+
