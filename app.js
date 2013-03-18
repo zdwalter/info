@@ -34,6 +34,7 @@ app.get('/', routes.index);
 app.get('/slides/:title', routes.slides);
 app.get('/js', routes.js);
 app.get('/cv', routes.cv);
+app.get('/resume', routes.resume);
 app.get('/proxyhub', routes.proxyhub);
 app.get('/echo/:content', routes.echo);
 
