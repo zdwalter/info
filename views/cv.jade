@@ -4,6 +4,7 @@ hr
 
 h2 Contact infomation
 
+p Name: Dawei Zheng(Walter)
 p email: zdwalter@gmail.com
 p phone: +86-13588746300
 p github: 
@@ -12,30 +13,21 @@ p Linkedin:
   a(target="_blank",href="http://www.linkedin.com/in/zdwalter") http://www.linkedin.com/in/zdwalter
 
 hr
-p My Name is Dawei Zheng(Walter). I am a developer.
-p Recently, I am using 
-  |  NodeJS
-  |  to build distributed system.
-p I used to develop server programs under Linux, using 
-  b python
-  |  and 
-  b C/C++
-  | .
-
-hr
 
 h2 Summary
-p lead and develop distributed system running on 100+ servers, which serve busily 24x7.
-    
-p experienced with complex software systems, distributed systems, algorithms, data structures, and performance optimizations. 
+p I am experienced with complex distributed systems, algorithms, data structures, and performance optimizations. 
 
-p design and deliver complex software systems to:
+p I have designed and delivered complex software systems to:
 p 1. Find/Extract features to match similar video/audio in a large known database.
-p 2. Find/Extract features to match similar text in a large article list.
+p 2. Crawling the internet, Find/Extract features to match similar text in a large article list.
 p 3. Collect and analytics server and app performance.
     
 h3 Specialties
 p Data collection and analytics, distributed system, Pattern Recognition 
+
+h3 Technologies
+p languages: C/C++, python, node.js, shell script
+p Linux, Network programming, Multi-thread programming
 
 hr
 
@@ -45,31 +37,40 @@ b Back-end Architect
 |  Doit.im 
 | 2012 - present
 
-p Doit.im(http://doit.im/), is the smart way to manage tasks, by over 3,000,000 users throughout the world.
-p I help to scale up the service for increasing number of users, using less CPU power than before.
+p After collecting the system information, I analysis and discover the bottle-net. Then I help to scale up the service for increasing number of users, using less CPU power and Network Bandwidth than before.
 
 b Architect & Senior Researcher
 |  ShanDa Interactive Entertainment Ltd.
 | 2011 – 2012
 
 p I am the dev lead and manager of "Fingerprinting and Tracking of Online Literature Works".
-p This project aims to create a unique digital fingerprint for each and every piece of literature works owned by Shanda Literature. The digital fingerprint can be used to identify pirated copies of the corresponding literature works on the Internet. The project will also build a tracking system which will automatically discover and report how Shanda’s online literature works populate and propagate on the Internet. With this system, the legal department can collect more accurate evidence, and deal with more piracy sites, and the marketing department will have statistic analysis to find out what customers like most.
+p I design and build the whole system, including:
+ul
+    li How to discover related webpage and crawl the site. (need to deal with thousands different sites)
+    li How to extract unique digital fingerprint of literature database. (keep extracted feature small)
+    li How to compare fast and correctly of target webpage.  (quickly filter out no-match candidates)
+    li How to present the useful data from match result. (diagram helps people to explore)
 
 b Lead Software Developer
 |  Vobile
 |  2005 - 2011
 
-p Vobile is the leading provider of digital content fingerprinting and identification products and services. Vobile's VDNA® (VideoDNA) technology is the gold standard in video content fingerprinting and identification and has been adopted by all major Hollywood studios and TV networks.
+p Vobile's VDNA® (VideoDNA) technology is the gold standard in video content fingerprinting and identification and has been adopted by all major Hollywood studios and TV networks.
 
 p As one of the first employees, I develop the groundbreaking product and service based on the VDNA® technology.
+
+p I build a C++ multi-thread application to:
+ul
+    li accept network request from many clients
+    li dispatch requests to several workers, which process the query (CPU bound)
+    li merge and filter the result using a trained neural network model (the model improves accurency through iteration)
 
 h3 Side Projects
 
 p
-a(target="_blank",href='http://learnjs.zdwalter.info') LearnJS
-|  - online Javascript learning (http://learnjs.zdwalter.info)
-|  You can type in some code, and visually see how code runs step by step.
-
+a(target="_blank",href='http://spider.0x1.in') SpiderMan
+|  - crawling webpage online service (http://spider.0x1.in)
+|  Make complicate crawling into simple http call.
 
 p
 a(target="_blank",href='http://s.0x1.in') Search
@@ -77,9 +78,9 @@ a(target="_blank",href='http://s.0x1.in') Search
 |  Grep search results from Google, then group similar results together.
 
 p
-a(target="_blank",href='http://spider.0x1.in') SpiderMan
-|  - crawling webpage online service (http://spider.0x1.in)
-|  Make complicate crawling into simple http call.
+a(target="_blank",href='http://learnjs.zdwalter.info') LearnJS
+|  - online Javascript learning (http://learnjs.zdwalter.info)
+|  You can type in some code, and visually see how code runs step by step.
 
 hr
 h2 Education
